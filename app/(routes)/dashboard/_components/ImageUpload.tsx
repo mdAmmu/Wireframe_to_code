@@ -13,8 +13,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import {getDownloadURL, ref, uploadBytes } from 'firebase/storage';
-import { storage } from '@/configs/firebaseConfig'
+// Firebase Storage upload moved to server-side API to avoid CORS issues
 import  axios  from "axios";
 import { useAuthContext } from "@/app/provider";
 import { useRouter } from "next/navigation";
@@ -47,14 +46,23 @@ const ImageUpload = () => {
     }
     setLoading(true);
 
-    const fileName = Date.now() + '.png';
-    const imageRef = ref(storage, "Wireframe to code" + fileName)
-    await uploadBytes(imageRef, file).then(resp => {
-      console.log("Image Uploaded...")
+    // Upload image via server-side API route (avoids CORS from browser → Firebase)
+    const formData = new FormData();
+    formData.append("file", file);
+
+    const uploadRes = await fetch("/api/upload-image", {
+      method: "POST",
+      body: formData,
     });
-    
-    const imageUrl = await getDownloadURL(imageRef);
-    console.log(imageUrl);
+
+    if (!uploadRes.ok) {
+      console.error("Image upload failed");
+      setLoading(false);
+      return;
+    }
+
+    const { imageUrl } = await uploadRes.json();
+    console.log("Image uploaded:", imageUrl);
 
     const uid = uuid4()
     console.log(uid);

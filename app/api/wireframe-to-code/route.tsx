@@ -1,21 +1,40 @@
-import { db } from "@/configs/db";
-import { WireframeToCodeTable } from "@/configs/schema";
-import { eq } from "drizzle-orm"
 import { NextRequest, NextResponse } from "next/server";
+import fs from 'fs';
+import path from 'path';
 
+const DB_FILE = path.join(process.cwd(), 'db.json');
+
+function getLocalData() {
+  if (!fs.existsSync(DB_FILE)) {
+    fs.writeFileSync(DB_FILE, JSON.stringify({ wireframes: [], users: [] }, null, 2));
+  }
+  try {
+    return JSON.parse(fs.readFileSync(DB_FILE, 'utf-8'));
+  } catch (e) {
+    return { wireframes: [], users: [] };
+  }
+}
+
+function saveLocalData(data: any) {
+  fs.writeFileSync(DB_FILE, JSON.stringify(data, null, 2));
+}
 
 export async function POST(req: NextRequest) {
   const { description, imageUrl, model, uid, email } = await req.json();
 
-  const result = await db.insert(WireframeToCodeTable).values({
+  const data = getLocalData();
+  const newRecord = {
+    id: data.wireframes.length + 1,
     uid: uid,
     description: description,
     imageUrl: imageUrl,
     model: model,
     createBy: email,
-  }).returning({ id: WireframeToCodeTable.id });
-
-  return NextResponse.json(result)
+    code: null
+  };
+  data.wireframes.push(newRecord);
+  saveLocalData(data);
+  return NextResponse.json([{ id: newRecord.id }]);
 }
 
 export async function GET(req: NextRequest) {
@@ -23,10 +42,12 @@ export async function GET(req: NextRequest) {
   const { searchParams } = new URL(reqUrl);
   const uid = searchParams?.get('uid');
   if (uid) {
-    const result = await db.select()
-      .from(WireframeToCodeTable)
-      .where(eq(WireframeToCodeTable.uid, uid));
-    return NextResponse.json(result[0]);
+    const data = getLocalData();
+    const record = data.wireframes.find((w: any) => w.uid === uid);
+    if (record) {
+      return NextResponse.json(record);
+    }
+    return NextResponse.json({ error: 'No Record Found' });
   }
 
   return NextResponse.json({ error: 'No Record Found' });
@@ -35,13 +56,14 @@ export async function GET(req: NextRequest) {
 export async function PUT(req: NextRequest) {
   const { uid, codeResp } = await req.json();
 
-  const result = await db.update(WireframeToCodeTable)
-    .set({
-    code: codeResp
-    }).where(eq(WireframeToCodeTable.uid, uid))
-    .returning({uid: WireframeToCodeTable.uid})
-
-  return NextResponse.json(result);
+  const data = getLocalData();
+  const index = data.wireframes.findIndex((w: any) => w.uid === uid);
+  if (index !== -1) {
+    data.wireframes[index].code = codeResp;
+    saveLocalData(data);
+    return NextResponse.json([{ uid }]);
+  }
+  return NextResponse.json({ error: 'Record not found for update' }, { status: 404 });
 }
 
 // *******************************

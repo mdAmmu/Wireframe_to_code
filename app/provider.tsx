@@ -1,7 +1,7 @@
 "use client"
-import { auth } from '@/configs/firebaseConfig';
+import { supabase } from '@/configs/supabaseConfig';
 import { AuthContext } from '@/context/AuthContext';
-import { onAuthStateChanged, User } from 'firebase/auth';
+import { User } from '@supabase/supabase-js';
 import React, { useContext, useEffect, useState } from 'react'
 
 interface AuthContextType {
@@ -16,11 +16,15 @@ function Provider({
     const [user, setUser] = useState<User | null>(null);
 
     useEffect(() => {
-        const unsubscribe = onAuthStateChanged(auth, (user) => {
-            setUser(user);
+        supabase.auth.getSession().then(({ data: { session } }) => {
+            setUser(session?.user ?? null);
         });
 
-        return () => unsubscribe(); // Cleanup
+        const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
+            setUser(session?.user ?? null);
+        });
+
+        return () => subscription.unsubscribe();
     }, []);
 
     return (

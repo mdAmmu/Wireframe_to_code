@@ -7,49 +7,95 @@ const openai = new OpenAI({
 });
 
 export async function POST(req: NextRequest) {
+  try {
+    const { model, description, imageUrl, isEdit, existingCode, userInstructions } = await req.json();
+    const ModelObj = Constants.AiModelList.find(item => item.name == model);
+    let modelName = ModelObj?.modelName ?? "gpt-4o";
 
-  const { model, description, imageUrl } = await req.json();
-  const ModelObj = Constants.AiModelList.find(item => item.name==model)
-  const modelName = ModelObj?.modelName;
-  console.log(modelName);
- const response = await openai.chat.completions.create({
-   model: modelName ?? "gpt-4o",
-   stream:true,
-    messages: [
-      {
-        "role": "user",
-        "content": [
-          {
-            "type": "text",
-            "text": description
-          },
-          {
-            "type": "image_url",
-            "image_url": {
-              "url":imageUrl
-            }
-          }
-        ]
-      }
-    ],
-    
- });
-  
-  const stream = new ReadableStream({
-    async start(controller) {
-      for await (const chunk of response) {
-        const text = chunk.choices?.[0]?.delta?.content || "";
-        controller.enqueue(new TextEncoder().encode(text));
-      }
-      controller.close();
+    // Since we are using standard OpenAI client/key, we map OpenRouter models (containing '/') to gpt-4o
+    if (modelName.includes("/")) {
+      modelName = "gpt-4o";
     }
-  });
+    
+    console.log("Using OpenAI Model Name:", modelName, isEdit ? "(Edit Mode)" : "(Generation Mode)");
 
-  return new Response(stream, {
-    headers: {
-      "Content-Type": "text/plain; charset=utf-8",
-    },
-  });
+    let messages: any[] = [];
+
+    if (isEdit) {
+      let promptText = `${Constants.EDIT_PROMPT}\n\nHere is the existing code:\n${existingCode}\n\nHere are the user's requested modifications:\n${userInstructions}`;
+      
+      if (imageUrl) {
+        promptText += `\n\nAdditionally, the user has uploaded/attached a new image. If they asked to use, display, or replace an image, use this exact URL for the image src attribute: "${imageUrl}"`;
+      }
+
+      messages = [
+        {
+          role: "user",
+          content: [
+            {
+              type: "text",
+              text: promptText
+            }
+          ]
+        }
+      ];
+      if (imageUrl) {
+        messages[0].content.push({
+          type: "image_url",
+          image_url: {
+            url: imageUrl
+          }
+        });
+      }
+    } else {
+      messages = [
+        {
+          role: "user",
+          content: [
+            {
+              type: "text",
+              text: description
+            },
+            {
+              type: "image_url",
+              image_url: {
+                url: imageUrl
+              }
+            }
+          ]
+        }
+      ];
+    }
+
+    const response = await openai.chat.completions.create({
+      model: modelName,
+      stream: true,
+      messages: messages,
+    });
+
+    const stream = new ReadableStream({
+      async start(controller) {
+        const encoder = new TextEncoder();
+        for await (const chunk of response) {
+          const text = chunk.choices?.[0]?.delta?.content || "";
+          controller.enqueue(encoder.encode(text));
+        }
+        controller.close();
+      }
+    });
+
+    return new Response(stream, {
+      headers: {
+        "Content-Type": "text/plain; charset=utf-8",
+      },
+    });
+  } catch (error: any) {
+    console.error("AI Generation error:", error);
+    return new Response(JSON.stringify({ error: error.message }), {
+      status: 500,
+      headers: { "Content-Type": "application/json" },
+    });
+  }
 }
 
 

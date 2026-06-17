@@ -1,0 +1,543 @@
+Paragraph 0 [Heading 1]: PROJECT REPORT  
+Paragraph 1 [Normal]: ON  
+Paragraph 2 [Normal]:         “AI RESUME SCREENING”
+Paragraph 3 [Normal]: IS SUBMITTED TO  
+Paragraph 4 [Normal]: DR. BABSAHEB AMBEDKER TECHNOLOGICAL UNIVERSITY  
+Paragraph 5 [Normal]: IN THE PRACTICAL FULFILLMENT OF THE DEGREE OF    
+Paragraph 6 [Normal]: BACHELOR OF TECHNOLOGY IN  
+Paragraph 7 [Normal]: COMPUTER SCIENCE & ENGINEERING  
+Paragraph 8 [Normal]: BY 
+Paragraph 9 [Normal]: MR. IBRAHIM POPATIYA(43)
+Paragraph 10 [Normal]: MR. SHAIKH UMAN SADIQUEALI (41)
+Paragraph 11 [Normal]: GUIDE  
+Paragraph 12 [Normal]: MR. B.A. KHANSOLE
+Paragraph 13 [Normal]:   
+Paragraph 14 [Normal]:    
+Paragraph 15 [Normal]: DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING  
+Paragraph 16 [Normal]: MATOSHRI PRATHISHTHAN’S SCHOOL OF ENGNEERING, NANDED  
+Paragraph 17 [Normal]: 2026-2027
+Paragraph 18 [Normal]: 
+Paragraph 19 [Normal]: 
+Paragraph 20 [Normal]: 
+Paragraph 21 [Normal]: CERTIFICATE
+Paragraph 22 [Normal]: 
+Paragraph 23 [Normal]: This is to certificate that the project entitled “AI RESUME SCREENING” is being submitted by MR. IBRAHIM POPATIYA, MR. SHAIKH UMAN  to “Dr Babasaheb Ambedkar technological University , Lonere Maharashtra ” as a partial fulfilment of award in Computer Engineering, is record of bonafied work carried out by them under my supervision and guidance the matter contain in this project work has not been submitted to any other institute for award of any degree
+Paragraph 24 [Normal]: 
+Paragraph 25 [Normal]: 
+Paragraph 26 [Normal]: 
+Paragraph 27 [Normal]: MR.B.A KHANSOLE                                                                        MR.B.A KHANSOLE
+Paragraph 28 [Normal]:      (project guide)                                                                                 (Head of department)
+Paragraph 29 [Normal]: 
+Paragraph 30 [Normal]: 
+Paragraph 31 [Normal]:                                                                                                                        
+Paragraph 32 [Normal]: 
+Paragraph 33 [Normal]: DR.L.M Waghmare sir
+Paragraph 34 [Normal]: (principal sir)
+Paragraph 35 [Normal]: 
+Paragraph 36 [Normal]: 
+Paragraph 37 [Normal]: 
+Paragraph 38 [Normal]: 
+Paragraph 39 [Normal]: 
+Paragraph 40 [Normal]: 
+Paragraph 41 [Normal]: 
+Paragraph 42 [Normal]: 
+Paragraph 43 [Normal]: 
+Paragraph 44 [Normal]: 
+Paragraph 45 [Normal]: 
+Paragraph 46 [Normal]: 
+Paragraph 47 [Normal]: 
+Paragraph 48 [Normal]: 
+Paragraph 49 [Normal]: 
+Paragraph 50 [Normal]: 
+Paragraph 51 [Normal]: 
+Paragraph 52 [Normal]: 
+Paragraph 53 [Normal]: 
+Paragraph 54 [Normal]: 
+Paragraph 55 [Normal]:     
+Paragraph 56 [Heading 1]: MATOSHRI PRATHISHTHAN’S 
+Paragraph 57 [Heading 1]: SCHOOL OF ENGNEERING  
+Paragraph 58 [Normal]:                DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING  
+Paragraph 59 [Normal]:   
+Paragraph 60 [Heading 1]: Certificate  
+Paragraph 61 [Heading 2]: This is to certify that the Project
+Paragraph 62 [Heading 2]:  “AI RESUME SCREENING”  
+Paragraph 63 [Normal]: Has been successfully completed in session 2025-2026 by  
+Paragraph 64 [Normal]: MR IBRAHIM POPATIYA
+Paragraph 65 [Normal]: MR. SHAIKH UMAN  
+Paragraph 66 [Normal]: In recognition to the partial Fulfillment for  
+Paragraph 67 [Normal]: The degree of bachelor of technology  (Computer science & Engineering),  
+Paragraph 68 [Normal]: Dr. Babasaheb Ambedkar Technological University , Lonere. 
+Paragraph 69 [Normal]: 
+Paragraph 70 [Normal]: Mr.B.A Khansole                                                                 Mr. B.A Khansole 
+Paragraph 71 [Normal]:      GUIDE                                                        	 	          HOD 
+Paragraph 72 [Normal]: 
+Paragraph 73 [Normal]:                                        
+Paragraph 74 [Normal]: DECLARATION
+Paragraph 75 [Normal]:   
+Paragraph 76 [Normal]: We, MR IBRAHIM, SHAIKH UMAN  hereby declare that we  have completed the project.
+Paragraph 77 [Normal]: We work towards the Bachelor of  Technology  Degree of  Dr. Babasaheb  
+Paragraph 78 [Normal]: Ambedkar  Technological  University in  computer Science  & Engineering   
+Paragraph 79 [Normal]: Discipline  on the topic entitled “AI RESUME SCREENING  ” Supervision of  “B.A KHANSOLE SIR ” Matoshri Pratishthan’s School of  Engineering , Nanded.  
+Paragraph 80 [Normal]:   The  report  embodies  the  original  work  done  by  me  in  partial  fulfilment  of  the  requirement  for the Degree of  Bachelor of  Technology of   
+Paragraph 81 [Normal]: Dr. Babasaheb Ambedkar Technological University in Computer Science & 
+Paragraph 82 [Normal]: Engineering     
+Paragraph 83 [Normal]:   
+Paragraph 84 [Normal]:   
+Paragraph 85 [Normal]:   
+Paragraph 86 [Normal]:   
+Paragraph 87 [Normal]:  
+Paragraph 88 [Normal]:    
+Paragraph 89 [Normal]: Place : Nanded                                                              MR IBRAHIM POPATIYA 
+Paragraph 90 [Normal]:                                                                                                        	     MR SHAIKH UMAN
+Paragraph 91 [Normal]:                                                                                                                
+Paragraph 92 [Normal]: Date :  
+Paragraph 93 [Normal]: 
+Paragraph 94 [Heading 2]: ACKNOWLEDGEMENT  
+Paragraph 95 [Normal]:   
+Paragraph 96 [Normal]: We would like to place on record my deep sense of gratitude to Head of Department Mr. Khansole Sir and Guide Mr. Khansole Sir, Department of Computer Science & Engineering, Matoshri Pratishthan’s School of Engineering, Nanded, for his stimulating guidance, continuous encouragement and supervision throughout the work.   
+Paragraph 97 [Normal]: I also wish to extend my thanks to other staff members and friends for attending my seminars and for their insightful comments and constructive suggestions to improve the quality of this project work.  
+Paragraph 98 [Normal]: I am extremely thankful to Dr. L.M WAGHMARE Matoshri Pratishthan’s School of Engineering, Nanded, for providing me infrastructural facilities to work in, without which this work would not have been possible.  
+Paragraph 99 [Normal]:   
+Paragraph 100 [Normal]:   
+Paragraph 101 [Normal]:   
+Paragraph 102 [Normal]:   
+Paragraph 103 [Normal]:   
+Paragraph 104 [Normal]:   
+Paragraph 105 [Normal]: 
+Paragraph 106 [Normal]: 
+Paragraph 107 [Normal]: 
+Paragraph 108 [Normal]: 
+Paragraph 109 [Normal]: 
+Paragraph 110 [Normal]:   
+Paragraph 111 [Normal]:                                                                                       NAME:  IBRAHIM POPATIYA  (43)
+Paragraph 112 [Normal]:                                                                                                  MR. SHAIKH UMAN(41)
+Paragraph 113 [Normal]:                                                                                                         
+Paragraph 114 [Normal]:                                                                                          
+Paragraph 115 [Normal]:       	  
+Paragraph 116 [Normal]:  
+Paragraph 117 [Heading 3]: ABSTRACT 
+Paragraph 118 [Normal]: 
+Paragraph 119 [Normal]: 
+Paragraph 120 [Normal]: In the digital era, websites play a crucial role in establishing an online presence for individuals and organizations. However, creating a website requires technical knowledge of design, coding, and development tools, which can be challenging for non-technical users. The AI Website Generator project aims to overcome this problem by providing an intelligent system that automatically generates websites using Artificial Intelligence (AI).
+Paragraph 121 [Normal]: The proposed system allows users to provide basic requirements such as website type, purpose, content, and design preferences. Based on the given input, the AI Website Generator analyzes the requirements and automatically creates a complete website structure, including layout, pages, and content. AI techniques are used to generate responsive designs, optimize layouts, and ensure consistency across web pages.
+Paragraph 122 [Normal]: The AI Website Generator reduces the time, cost, and effort required for website development. It enables users to create functional and visually appealing websites without having prior coding or design knowledge. This system is useful for students, small businesses, startups, and individuals who want to quickly develop websites. The project demonstrates the effective use of Artificial Intelligence in automating web development and simplifying the website creation process.
+Paragraph 123 [Normal]: 
+Paragraph 124 [Normal]: 
+Paragraph 125 [Normal]: 
+Paragraph 126 [Normal]: 
+Paragraph 127 [Normal]: 
+Paragraph 128 [Normal]: 
+Paragraph 129 [Normal]: 
+Paragraph 130 [Normal]: 
+Paragraph 131 [Normal]: 
+Paragraph 132 [Normal]: 
+Paragraph 133 [Normal]:  
+Paragraph 134 [Heading 3]: CONTENT 
+Paragraph 135 [Normal]:  
+Paragraph 136 [Normal]:   
+Paragraph 137 [Normal]:  
+Paragraph 138 [Normal]:  
+Paragraph 139 [Normal]:  
+Paragraph 140 [Normal]:  
+Paragraph 141 [Normal]:     
+Paragraph 142 [Normal]:  
+Paragraph 143 [Normal]:   	  
+Paragraph 144 [Heading 4]: 1. INTRODUCTION  
+Paragraph 145 [Normal]: 
+Paragraph 146 [Normal]: In today’s digital world, websites have become an essential medium for communication, business, education, and information sharing. Every organization, business, and individual requires a website to establish an online presence. However, traditional website development involves technical knowledge of programming languages, web design principles, and development tools, which can be difficult and time-consuming for non-technical users.
+Paragraph 147 [Normal]: Conventional website creation requires manual coding, designing layouts, and managing multiple web technologies such as HTML, CSS, JavaScript, and frameworks. This process not only increases development time but also demands skilled developers, resulting in higher cost and complexity. Therefore, there is a growing need for an automated solution that simplifies website creation.
+Paragraph 148 [Normal]: The AI Website Generator is designed to address these challenges by using Artificial Intelligence (AI) to automatically generate websites based on user requirements. The system collects basic inputs such as website type, content preferences, and design choices, and then generates a complete website structure including layout, pages, and content.
+Paragraph 149 [Normal]: The main objective of this project is to reduce manual effort, development time, and technical dependency while producing responsive and user-friendly websites. The AI Website Generator demonstrates how AI can be effectively used to automate web development tasks and provide an efficient solution for modern website creation.
+Paragraph 150 [Normal]: 
+Paragraph 151 [Normal]:   
+Paragraph 152 [Normal]: 
+Paragraph 153 [Normal]: 
+Paragraph 154 [Normal]: 
+Paragraph 155 [Normal]: 
+Paragraph 156 [Normal]: 
+Paragraph 157 [Normal]: 
+Paragraph 158 [Heading 4]: 2. SCOPE OF THE PROJECT  
+Paragraph 159 [Normal]:   
+Paragraph 160 [Normal]: The scope of the AI Website Generator project defines the functionalities and limitations of the system. The project mainly focuses on automating the website creation process using Artificial Intelligence to reduce manual effort and technical dependency.
+Paragraph 161 [Normal]: The system allows users to generate websites by providing basic inputs such as website purpose, content details, layout preferences, and design requirements. Based on the user input, the AI Website Generator automatically creates a complete website structure including web pages, layout, and content organization.
+Paragraph 162 [Normal]: The scope of the project includes generating responsive and user-friendly websites suitable for different devices such as desktops, tablets, and mobile phones. The system ensures consistent design, proper navigation, and structured layout without requiring manual coding from the user.
+Paragraph 163 [Normal]: This project is intended to be useful for students, small businesses, startups, and individuals who want to create websites quickly without having advanced technical knowledge. The scope is limited to website generation and does not include complex backend functionalities such as payment gateways or advanced server-side processing.
+Paragraph 164 [Normal]: In future enhancements, the project scope can be extended to include multiple website templates, customization options, integration with databases, and deployment features. Thus, the AI Website Generator provides a scalable foundation for automated web development systems.
+Paragraph 165 [Normal]: 
+Paragraph 166 [Normal]: 
+Paragraph 167 [Normal]: 
+Paragraph 168 [Normal]:                                     
+Paragraph 169 [Normal]: 
+Paragraph 170 [Normal]: 
+Paragraph 171 [Normal]: 
+Paragraph 172 [Normal]: 
+Paragraph 173 [Normal]: 
+Paragraph 174 [Normal]: 
+Paragraph 175 [Normal]:                                       3. FRONTEND
+Paragraph 176 [Normal]: 
+
+Paragraph 177 [Normal]: 
+Paragraph 178 [Heading 4]:                            
+Paragraph 179 [Normal]:   
+Paragraph 180 [Normal]:   
+Paragraph 181 [Normal]:   	  
+Paragraph 182 [Normal]: 
+Paragraph 183 [Normal]: 
+Paragraph 184 [Normal]: 
+Paragraph 185 [Normal]: 
+Paragraph 186 [Normal]: 
+Paragraph 187 [Normal]: 
+Paragraph 188 [Normal]: 
+Paragraph 189 [Normal]: 
+Paragraph 190 [Normal]: 
+Paragraph 191 [Normal]: 
+Paragraph 192 [Normal]: 
+Paragraph 193 [Normal]: 
+Paragraph 194 [Normal]: 
+Paragraph 195 [Heading 4]: 
+Paragraph 196 [Normal]: 
+Paragraph 197 [Heading 4]: 
+Paragraph 198 [Heading 4]: 
+Paragraph 199 [Heading 4]: 4. WORKING PROCESS  
+Paragraph 200 [Normal]: 
+Paragraph 201 [Normal]: The working process of the AI Website Generator explains how the system generates a complete website automatically using Artificial Intelligence. The system follows a structured approach from user input to website generation.
+Paragraph 202 [Normal]: Initially, the user accesses the AI Website Generator and provides basic requirements such as website type, purpose, preferred layout, color theme, and content details. This information is collected through a simple and user-friendly interface.
+Paragraph 203 [Normal]: After receiving the input, the system processes the data using Artificial Intelligence techniques. The AI engine analyzes the user requirements and determines the appropriate website structure, including the number of pages, navigation menu, and content placement.
+Paragraph 204 [Normal]: Next, the system automatically generates the website layout and design. It creates responsive web pages using predefined templates and AI-based design rules to ensure proper alignment, consistency, and visual appeal across different devices.
+Paragraph 205 [Normal]: Once the website structure and design are generated, the system inserts the content into the respective sections and links the pages through navigation. The generated website is then tested for responsiveness and basic functionality.
+Paragraph 206 [Normal]: Finally, the complete website is displayed to the user for review. The user can preview, modify basic details if required, and download or deploy the website. 
+Paragraph 207 [Normal]:   
+Paragraph 208 [Heading 4]:                         5. RESOURCES USED  
+Paragraph 209 [Heading 4]: 
+Paragraph 210 [Heading 4]:   
+Paragraph 211 [Normal]:   
+Paragraph 212 [Normal]:   
+Paragraph 213 [Normal]:   
+Paragraph 214 [Normal]:   
+Paragraph 215 [Normal]:   
+Paragraph 216 [Normal]: 
+Paragraph 217 [Normal]: 
+Paragraph 218 [Normal]: 
+Paragraph 219 [Normal]: 
+Paragraph 220 [Normal]:   
+Paragraph 221 [Normal]:   
+Paragraph 222 [Normal]:   
+Paragraph 223 [Normal]: 
+Paragraph 224 [Normal]:     
+Paragraph 225 [Heading 4]: 6. SOURCE CODE  
+Paragraph 226 [Normal]: 
+Paragraph 227 [Normal]: <!DOCTYPE html>
+Paragraph 228 [Normal]: <html lang="en">
+Paragraph 229 [Normal]: <head>
+Paragraph 230 [Normal]:   <meta charset="UTF-8" />
+Paragraph 231 [Normal]:   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+Paragraph 232 [Normal]:   <title>AI Website Generator</title>
+Paragraph 233 [Normal]: 
+Paragraph 234 [Normal]:   <!-- Tailwind -->
+Paragraph 235 [Normal]:   <script src="https://cdn.tailwindcss.com"></script>
+Paragraph 236 [Normal]: 
+Paragraph 237 [Normal]:   <!-- Font Awesome -->
+Paragraph 238 [Normal]:   <link
+Paragraph 239 [Normal]:     rel="stylesheet"
+Paragraph 240 [Normal]:     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+Paragraph 241 [Normal]:   />
+Paragraph 242 [Normal]: 
+Paragraph 243 [Normal]:   <style>
+Paragraph 244 [Normal]:     textarea::-webkit-scrollbar { width: 8px; }
+Paragraph 245 [Normal]:     textarea::-webkit-scrollbar-thumb { background: #555; border-radius: 4px; }
+Paragraph 246 [Normal]:   </style>
+Paragraph 247 [Normal]: </head>
+Paragraph 248 [Normal]: 
+Paragraph 249 [Normal]: <body class="bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white min-h-screen">
+Paragraph 250 [Normal]: 
+Paragraph 251 [Normal]:   <!-- Header -->
+Paragraph 252 [Normal]:   <header class="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
+Paragraph 253 [Normal]:     <h1 class="text-xl font-bold tracking-wide">
+Paragraph 254 [Normal]:       ⚡ AI Website Generator
+Paragraph 255 [Normal]:     </h1>
+Paragraph 256 [Normal]:     <span class="text-sm px-4 py-1 rounded-full bg-white/10 backdrop-blur">
+Paragraph 257 [Normal]:       Powered by <b>Gemini 2.5 Flash</b>
+Paragraph 258 [Normal]:     </span>
+Paragraph 259 [Normal]:   </header>
+Paragraph 260 [Normal]: 
+Paragraph 261 [Normal]:   <!-- Hero -->
+Paragraph 262 [Normal]:   <section class="max-w-4xl mx-auto text-center px-6 mt-16">
+Paragraph 263 [Normal]:     <h2 class="text-4xl md:text-5xl font-extrabold leading-tight mb-6">
+Paragraph 264 [Normal]:       Turn your idea into a  
+Paragraph 265 [Normal]:       <span class="bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent">
+Paragraph 266 [Normal]:         stunning website
+Paragraph 267 [Normal]:       </span>
+Paragraph 268 [Normal]:     </h2>
+Paragraph 269 [Normal]: 
+Paragraph 270 [Normal]:     <p class="text-gray-400 mb-10">
+Paragraph 271 [Normal]:       Describe your idea and get a complete single-page website built with
+Paragraph 272 [Normal]:       HTML & Tailwind CSS — instantly.
+Paragraph 273 [Normal]:     </p>
+Paragraph 274 [Normal]: 
+Paragraph 275 [Normal]:     <!-- Prompt Box -->
+Paragraph 276 [Normal]:     <div class="relative max-w-2xl mx-auto">
+Paragraph 277 [Normal]:       <textarea
+Paragraph 278 [Normal]:         id="userPrompt"
+Paragraph 279 [Normal]:         placeholder="Example: Build a landing page for a fitness app with pricing, testimonials and CTA..."
+Paragraph 280 [Normal]:         class="w-full h-36 p-5 rounded-2xl bg-gray-900 border border-white/10 focus:outline-none focus:ring-2 focus:ring-cyan-500 resize-none"
+Paragraph 281 [Normal]:       ></textarea>
+Paragraph 282 [Normal]: 
+Paragraph 283 [Normal]:       <button
+Paragraph 284 [Normal]:         id="generateBtn"
+Paragraph 285 [Normal]:         class="absolute bottom-4 right-4 bg-cyan-500 hover:bg-cyan-600 text-black px-5 py-2 rounded-xl font-semibold transition flex items-center gap-2"
+Paragraph 286 [Normal]:       >
+Paragraph 287 [Normal]:         Generate
+Paragraph 288 [Normal]:         <i class="fas fa-arrow-right"></i>
+Paragraph 289 [Normal]:       </button>
+Paragraph 290 [Normal]:     </div>
+Paragraph 291 [Normal]:   </section>
+Paragraph 292 [Normal]: 
+Paragraph 293 [Normal]:   <!-- Editor + Preview -->
+Paragraph 294 [Normal]:   <section class="max-w-7xl mx-auto px-6 mt-20 mb-20">
+Paragraph 295 [Normal]:     <div class="grid grid-cols-1 md:grid-cols-2 gap-8" style="height: 75vh;">
+Paragraph 296 [Normal]: 
+Paragraph 297 [Normal]:       <!-- Editor -->
+Paragraph 298 [Normal]:       <div class="flex flex-col h-full">
+Paragraph 299 [Normal]:         <div class="flex items-center justify-between mb-3">
+Paragraph 300 [Normal]:           <h3 class="font-semibold text-lg">HTML Editor</h3>
+Paragraph 301 [Normal]:         </div>
+Paragraph 302 [Normal]:         <textarea
+Paragraph 303 [Normal]:           id="htmlEditor"
+Paragraph 304 [Normal]:           class="flex-1 w-full p-4 rounded-xl bg-gray-900 border border-white/10 focus:outline-none resize-none font-mono text-sm"
+Paragraph 305 [Normal]:           placeholder="Generated HTML will appear here..."
+Paragraph 306 [Normal]:         ></textarea>
+Paragraph 307 [Normal]:       </div>
+Paragraph 308 [Normal]: 
+Paragraph 309 [Normal]:       <!-- Preview -->
+Paragraph 310 [Normal]:       <div class="flex flex-col h-full">
+Paragraph 311 [Normal]:         <div class="flex items-center justify-between mb-3">
+Paragraph 312 [Normal]:           <h3 class="font-semibold text-lg">Live Preview</h3>
+Paragraph 313 [Normal]:           <button
+Paragraph 314 [Normal]:             id="refreshButton"
+Paragraph 315 [Normal]:             class="text-sm px-3 py-1 rounded-lg bg-white/10 hover:bg-white/20 transition"
+Paragraph 316 [Normal]:           >
+Paragraph 317 [Normal]:             <i class="fas fa-rotate"></i> Refresh
+Paragraph 318 [Normal]:           </button>
+Paragraph 319 [Normal]:         </div>
+Paragraph 320 [Normal]: 
+Paragraph 321 [Normal]:         <iframe
+Paragraph 322 [Normal]:           id="htmlPreview"
+Paragraph 323 [Normal]:           class="flex-1 w-full rounded-xl border border-white/10 bg-white"
+Paragraph 324 [Normal]:           sandbox="allow-scripts allow-forms"
+Paragraph 325 [Normal]:         ></iframe>
+Paragraph 326 [Normal]:       </div>
+Paragraph 327 [Normal]: 
+Paragraph 328 [Normal]:     </div>
+Paragraph 329 [Normal]:   </section>
+Paragraph 330 [Normal]: 
+Paragraph 331 [Normal]:   <!-- Footer -->
+Paragraph 332 [Normal]:   <footer class="text-center text-gray-500 text-sm py-8 border-t border-white/10">
+Paragraph 333 [Normal]:     Built with ❤️ using Gemini 2.5 Flash · Single-File Website Generator
+Paragraph 334 [Normal]:   </footer>
+Paragraph 335 [Normal]: 
+Paragraph 336 [Normal]:   <script src="script.js"></script>
+Paragraph 337 [Normal]: </body>
+Paragraph 338 [Normal]: </html>
+Paragraph 339 [Normal]: 
+Paragraph 340 [Normal]: document.addEventListener("DOMContentLoaded", () => {
+Paragraph 341 [Normal]:   const GEMINI_API_KEY = "AIzaSyDVy8JpAM4_JqynoMy4Er8WngzgVNKkZ3w";
+Paragraph 342 [Normal]:   const GEMINI_MODEL = "gemini-2.5-flash";
+Paragraph 343 [Normal]: 
+Paragraph 344 [Normal]:   const userPrompt = document.getElementById("userPrompt");
+Paragraph 345 [Normal]:   const generateBtn = document.getElementById("generateBtn");
+Paragraph 346 [Normal]:   const htmlEditor = document.getElementById("htmlEditor");
+Paragraph 347 [Normal]:   const htmlPreview = document.getElementById("htmlPreview");
+Paragraph 348 [Normal]:   const refreshButton = document.getElementById("refreshButton");
+Paragraph 349 [Normal]: 
+Paragraph 350 [Normal]:   const systemPrompt = `
+Paragraph 351 [Normal]: You are a professional frontend web developer.
+Paragraph 352 [Normal]: Generate a COMPLETE single-page website in ONE HTML file.
+Paragraph 353 [Normal]: Rules:
+Paragraph 354 [Normal]: - Use HTML + Tailwind CSS ONLY
+Paragraph 355 [Normal]: - Include <script src="https://cdn.tailwindcss.com"></script> in <head>
+Paragraph 356 [Normal]: - NO explanations
+Paragraph 357 [Normal]: - NO markdown
+Paragraph 358 [Normal]: - NO comments outside HTML
+Paragraph 359 [Normal]: - Output ONLY valid HTML code
+Paragraph 360 [Normal]: `;
+Paragraph 361 [Normal]: 
+Paragraph 362 [Normal]:   async function generateWebsite(userInput) {
+Paragraph 363 [Normal]:     try {
+Paragraph 364 [Normal]:       const response = await fetch(
+Paragraph 365 [Normal]:         `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent?key=${GEMINI_API_KEY}`,
+Paragraph 366 [Normal]:         {
+Paragraph 367 [Normal]:           method: "POST",
+Paragraph 368 [Normal]:           headers: { "Content-Type": "application/json" },
+Paragraph 369 [Normal]:           body: JSON.stringify({
+Paragraph 370 [Normal]:             contents: [
+Paragraph 371 [Normal]:               {
+Paragraph 372 [Normal]:                 role: "user",
+Paragraph 373 [Normal]:                 parts: [
+Paragraph 374 [Normal]:                   {
+Paragraph 375 [Normal]:                     text: systemPrompt + "\n\nUser request:\n" + userInput
+Paragraph 376 [Normal]:                   }
+Paragraph 377 [Normal]:                 ]
+Paragraph 378 [Normal]:               }
+Paragraph 379 [Normal]:             ],
+Paragraph 380 [Normal]:             generationConfig: {
+Paragraph 381 [Normal]:               temperature: 0.4,
+Paragraph 382 [Normal]:               maxOutputTokens: 8192
+Paragraph 383 [Normal]:             }
+Paragraph 384 [Normal]:           })
+Paragraph 385 [Normal]:         }
+Paragraph 386 [Normal]:       );
+Paragraph 387 [Normal]: 
+Paragraph 388 [Normal]:       const data = await response.json();
+Paragraph 389 [Normal]: 
+Paragraph 390 [Normal]:       return (
+Paragraph 391 [Normal]:         data.candidates?.[0]?.content?.parts?.[0]?.text ||
+Paragraph 392 [Normal]:         "<!-- Error generating HTML -->"
+Paragraph 393 [Normal]:       );
+Paragraph 394 [Normal]:     } catch (error) {
+Paragraph 395 [Normal]:       console.error("Gemini API Error:", error);
+Paragraph 396 [Normal]:       return "<!-- Gemini API Error -->";
+Paragraph 397 [Normal]:     }
+Paragraph 398 [Normal]:   }
+Paragraph 399 [Normal]: 
+Paragraph 400 [Normal]:   generateBtn.addEventListener("click", async () => {
+Paragraph 401 [Normal]:     const prompt = userPrompt.value.trim();
+Paragraph 402 [Normal]:     if (!prompt) {
+Paragraph 403 [Normal]:       alert("Please enter your website idea");
+Paragraph 404 [Normal]:       return;
+Paragraph 405 [Normal]:     }
+Paragraph 406 [Normal]: 
+Paragraph 407 [Normal]:     generateBtn.disabled = true;
+Paragraph 408 [Normal]:     generateBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
+Paragraph 409 [Normal]: 
+Paragraph 410 [Normal]:     const htmlOutput = await generateWebsite(prompt);
+Paragraph 411 [Normal]: 
+Paragraph 412 [Normal]:     htmlEditor.value = htmlOutput;
+Paragraph 413 [Normal]:     htmlPreview.srcdoc = htmlOutput;
+Paragraph 414 [Normal]: 
+Paragraph 415 [Normal]:     generateBtn.disabled = false;
+Paragraph 416 [Normal]:     generateBtn.innerHTML = '<i class="fas fa-arrow-right"></i>';
+Paragraph 417 [Normal]:   });
+Paragraph 418 [Normal]: 
+Paragraph 419 [Normal]:   refreshButton.addEventListener("click", () => {
+Paragraph 420 [Normal]:     htmlPreview.srcdoc = htmlEditor.value;
+Paragraph 421 [Normal]:   });
+Paragraph 422 [Normal]: 
+Paragraph 423 [Normal]:   htmlEditor.addEventListener("input", () => {
+Paragraph 424 [Normal]:     htmlPreview.srcdoc = htmlEditor.value;
+Paragraph 425 [Normal]:   });
+Paragraph 426 [Normal]: });
+Paragraph 427 [Normal]: 
+Paragraph 428 [Normal]: 
+Paragraph 429 [Normal]: 
+Paragraph 430 [Normal]: 
+Paragraph 431 [Normal]: 
+Paragraph 432 [Normal]: 
+Paragraph 433 [Normal]: 
+Paragraph 434 [Normal]: 
+Paragraph 435 [Normal]: 
+Paragraph 436 [Normal]: 
+Paragraph 437 [Normal]: 
+Paragraph 438 [Normal]: 
+Paragraph 439 [Normal]: 
+Paragraph 440 [Normal]: 
+Paragraph 441 [Normal]: 
+Paragraph 442 [Normal]: 
+Paragraph 443 [Normal]: 
+Paragraph 444 [Normal]: 
+Paragraph 445 [Heading 4]: 8.ADVANTAGES 
+Paragraph 446 [Normal]: 
+Paragraph 447 [Normal]: 1. Automated Website Creation
+Paragraph 448 [Normal]: 
+Paragraph 449 [Normal]: The AI Website Generator automatically creates complete websites based on user inputs such as website type, content, and design preferences. This eliminates the need for manual coding and complex design work.
+Paragraph 450 [Normal]: 📌 Example: A user selects “Business Website,” and the system automatically generates pages like Home, About, Services, and Contact.
+Paragraph 451 [Normal]: 
+Paragraph 452 [Normal]: 2. Saves Time and Development Effort
+Paragraph 453 [Normal]: 
+Paragraph 454 [Normal]: Traditional website development takes days or weeks. The AI Website Generator significantly reduces this time by generating a website within minutes.
+Paragraph 455 [Normal]: 📌 Example: Instead of coding HTML and CSS manually, the user gets a ready-made website instantly.
+Paragraph 456 [Normal]: 
+Paragraph 457 [Normal]: 3. No Technical Knowledge Required
+Paragraph 458 [Normal]: 
+Paragraph 459 [Normal]: The system is designed for non-technical users. Anyone can generate a website without knowing programming languages or web development tools.
+Paragraph 460 [Normal]: 📌 Example: A student with no coding background can create a personal portfolio website easily.
+Paragraph 461 [Normal]: 
+Paragraph 462 [Normal]: 4. Professional and Consistent Design
+Paragraph 463 [Normal]: 
+Paragraph 464 [Normal]: The AI ensures proper layout, alignment, color schemes, and typography, resulting in visually appealing and professional websites.
+Paragraph 465 [Normal]: 📌 Example: All pages follow the same design theme and layout without design mismatches.
+Paragraph 466 [Normal]: 
+Paragraph 467 [Normal]: 5. Responsive and Mobile-Friendly Websites
+Paragraph 468 [Normal]: 
+Paragraph 469 [Normal]: The generated websites are responsive and compatible with different screen sizes such as mobile phones, tablets, and desktops.
+Paragraph 470 [Normal]: 📌 Example: The same website automatically adjusts its layout when opened on a mobile device.
+Paragraph 471 [Normal]: 
+Paragraph 472 [Normal]: 6. AI-Based Layout and Content Optimization
+Paragraph 473 [Normal]: 
+Paragraph 474 [Normal]: Artificial Intelligence helps in organizing content and selecting suitable layouts based on website purpose.
+Paragraph 475 [Normal]: 📌 Example: For an e-commerce website, the AI prioritizes product sections and call-to-action buttons.
+Paragraph 476 [Normal]: 
+Paragraph 477 [Normal]: 7. User-Friendly Interface
+Paragraph 478 [Normal]: 
+Paragraph 479 [Normal]: The system provides a simple and interactive interface that guides users through the website creation process.
+Paragraph 480 [Normal]: 📌 Example: Users just fill in forms and select options instead of writing code.
+Paragraph 481 [Normal]: 
+Paragraph 482 [Normal]: 8. Cost-Effective Solution
+Paragraph 483 [Normal]: 
+Paragraph 484 [Normal]: The AI Website Generator reduces the cost of hiring professional web developers or designers.
+Paragraph 485 [Normal]: 📌 Example: Small businesses can create websites without paying high development fees.
+Paragraph 486 [Normal]: 
+Paragraph 487 [Normal]: 9. Faster Deployment
+Paragraph 488 [Normal]: 
+Paragraph 489 [Normal]: Websites generated by the system can be easily downloaded or deployed, speeding up the launch process.
+Paragraph 490 [Normal]: 📌 Example: A startup can launch its website on the same day it is created.
+Paragraph 491 [Normal]: 
+Paragraph 492 [Normal]: 10. Customization Flexibility
+Paragraph 493 [Normal]: 
+Paragraph 494 [Normal]: Users can modify content, colors, and layouts according to their needs even after the website is generated.
+Paragraph 495 [Normal]: 📌 Example: A user can regenerate the website with a different color theme for branding purposes.
+Paragraph 496 [Normal]: 
+Paragraph 497 [Normal]: 11. Scalable and Extendable System
+Paragraph 498 [Normal]: 
+Paragraph 499 [Normal]: The project can be enhanced in the future by adding advanced features such as backend integration and SEO tools.
+Paragraph 500 [Normal]: 📌 Example: In future versions, database and login systems can be added.
+Paragraph 501 [Normal]: 
+Paragraph 502 [Normal]: 12. Real-World Application and Learning
+Paragraph 503 [Normal]: 
+Paragraph 504 [Normal]: The project reflects real-world AI applications and helps students understand automated web development.
+Paragraph 505 [Normal]: 📌 Example: Students gain hands-on experience with AI-driven design and development workflows
+Paragraph 506 [Normal]: 
+Paragraph 507 [Normal]: 
+Paragraph 508 [Normal]: 
+Paragraph 509 [Heading 4]: 
+Paragraph 510 [Heading 4]: 
+Paragraph 511 [Heading 4]: 
+Paragraph 512 [Heading 4]: 
+Paragraph 513 [Heading 4]: 
+Paragraph 514 [Heading 4]: 
+Paragraph 515 [Heading 4]: 
+Paragraph 516 [Heading 4]: 
+Paragraph 517 [Heading 4]: 
+Paragraph 518 [Heading 4]: 
+Paragraph 519 [Heading 4]: 
+Paragraph 520 [Heading 4]: 
+Paragraph 521 [Normal]: 
+Paragraph 522 [Heading 4]: 
+Paragraph 523 [Heading 4]: 9.CONCLUSION 
+Paragraph 524 [Normal]:  
+Paragraph 525 [Normal]: The AI Website Generator project successfully demonstrates the use of Artificial Intelligence in automating the website development process. In the present digital era, having a website is essential, but traditional web development requires technical knowledge, time, and cost. This project provides an efficient solution by allowing users to generate complete and responsive websites without manual coding.
+Paragraph 526 [Normal]: The system simplifies website creation by accepting basic user requirements such as website purpose, layout preferences, and content details. Using AI-based techniques, it automatically generates structured web pages with consistent design, proper navigation, and responsive layouts. This reduces development effort and improves overall efficiency.
+Paragraph 527 [Normal]: The AI Website Generator is beneficial for students, small businesses, startups, and individuals who want to quickly establish an online presence. It saves time, minimizes errors, and removes the dependency on professional developers for basic websites.
+Paragraph 528 [Normal]: Overall, this project highlights the practical application of Artificial Intelligence in web development and provides a scalable foundation for future enhancements such as advanced customization, backend integration, and deployment support.
+Paragraph 529 [Normal]: 
+Paragraph 530 [Normal]: 
+Paragraph 531 [Normal]: 
+Paragraph 532 [Normal]: 
+Paragraph 533 [Heading 5]: 10.REFERENCES  
+Paragraph 534 [Normal]:   
+Paragraph 535 [Normal (Web)]:   https://www.geeksforgeeks.org/artificial-intelligence-tutorial/
+Paragraph 536 [Normal (Web)]:   https://www.geeksforgeeks.org/web-development/
+Paragraph 537 [Normal (Web)]:   https://www.w3schools.com/html/
+Paragraph 538 [Normal (Web)]:   https://www.w3schools.com/css/
+Paragraph 539 [Normal (Web)]:   https://www.w3schools.com/javascript/
+Paragraph 540 [Normal (Web)]:   https://www.ibm.com/topics/artificial-intelligenc
+Paragraph 541 [Normal]: 

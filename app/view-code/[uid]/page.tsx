@@ -22,9 +22,11 @@ export interface RECORD {
 const ViewCode = () => {
   const { uid } = useParams();
   const [loading, setLoading] = useState(false);
+  const [updateLoading, setUpdateLoading] = useState(false);
   const [codeResp, setCodeResp] = useState("");
   const [record, setRecord] = useState<RECORD | null>();
   const [isReady, setIsReady] = useState(false);
+
   useEffect(() => {
     uid && GetRecordInfo();
   }, [uid]);
@@ -41,7 +43,20 @@ const ViewCode = () => {
       GenerateCode(resp);
     }
     else {
-      setCodeResp(resp?.code?.resp);
+      let dbCode = resp?.code?.resp || "";
+      const codeBlockMatch = dbCode.match(/```(?:tsx|jsx|js|typescript|javascript)?\n([\s\S]*?)\n```/);
+      if (codeBlockMatch) {
+        dbCode = codeBlockMatch[1];
+      } else {
+        const importIndex = dbCode.indexOf("import");
+        if (importIndex !== -1) {
+          dbCode = dbCode.substring(importIndex);
+        }
+      }
+      dbCode = dbCode.replace(/^```[a-zA-Z]*\s*/g, "");
+      dbCode = dbCode.replace(/```\s*$/g, "");
+
+      setCodeResp(dbCode);
       setLoading(false);
       setIsReady(true);
     }
@@ -50,7 +65,6 @@ const ViewCode = () => {
     }
   
     setLoading(false);
-
   };
 
   const GenerateCode = async (record: RECORD) => {
@@ -69,45 +83,147 @@ const ViewCode = () => {
     setLoading(false);
     const reader = res.body.getReader();
     const decoder = new TextDecoder();
+    let accumulatedCode = "";
+
     while (true) {
       const { done, value } = await reader.read();
       if (done) break;
 
-      const text = (decoder.decode(value)).replace('```tsx', '').replace('```', '');
-      setCodeResp((prev) => prev + text);
-      console.log(text);
+      const text = decoder.decode(value);
+      accumulatedCode += text;
+      
+      // Real-time progressive cleaning for smooth UI streaming
+      const cleanChunk = text.replace(/```tsx|```jsx|```javascript|```typescript|```js|```/g, "");
+      setCodeResp((prev) => prev + cleanChunk);
     }
-    // setLoading(false);
+
+    // Robust extraction of React code
+    let finalCleanCode = accumulatedCode;
+    const codeBlockMatch = accumulatedCode.match(/```(?:tsx|jsx|js|typescript|javascript)?\n([\s\S]*?)\n```/);
+    if (codeBlockMatch) {
+      finalCleanCode = codeBlockMatch[1];
+    } else {
+      const importIndex = finalCleanCode.indexOf("import");
+      if (importIndex !== -1) {
+        finalCleanCode = finalCleanCode.substring(importIndex);
+      }
+    }
+
+    finalCleanCode = finalCleanCode.replace(/^```[a-zA-Z]*\s*/g, "");
+    finalCleanCode = finalCleanCode.replace(/```\s*$/g, "");
+
+    setCodeResp(finalCleanCode);
     setIsReady(true);
-    
+    UpdateCodeToDb(finalCleanCode, record?.uid);
   };
 
-  useEffect(() => {
-    if (codeResp != '' && record?.uid && isReady && record?.code == null)
-    {
-      UpdateCodeToDb();
-    }
-  },[codeResp&&record])
+  const handleEditCode = async (userInstructions: string, imageFile?: File | null) => {
+    setUpdateLoading(true);
+    setIsReady(false);
+    const previousCode = codeResp;
+    setCodeResp("");
 
-  const UpdateCodeToDb = async () => {
+    try {
+      let uploadedImageUrl = record?.imageUrl;
+
+      if (imageFile) {
+        const formData = new FormData();
+        formData.append("file", imageFile);
+
+        const uploadRes = await fetch("/api/upload-image", {
+          method: "POST",
+          body: formData,
+        });
+
+        if (uploadRes.ok) {
+          const uploadData = await uploadRes.json();
+          uploadedImageUrl = uploadData.imageUrl;
+          console.log("New image uploaded for edit:", uploadedImageUrl);
+        } else {
+          console.error("New image upload failed");
+        }
+      }
+
+      const res = await fetch("/api/ai-model", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          model: record?.model,
+          imageUrl: uploadedImageUrl,
+          isEdit: true,
+          existingCode: previousCode,
+          userInstructions: userInstructions,
+        }),
+      });
+
+      if (!res.body) return;
+      const reader = res.body.getReader();
+      const decoder = new TextDecoder();
+      let accumulatedCode = "";
+
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+
+        const text = decoder.decode(value);
+        accumulatedCode += text;
+        
+        const cleanChunk = text.replace(/```tsx|```jsx|```javascript|```typescript|```js|```/g, "");
+        setCodeResp((prev) => prev + cleanChunk);
+      }
+
+      // Robust extraction of React code
+      let finalCleanCode = accumulatedCode;
+      const codeBlockMatch = accumulatedCode.match(/```(?:tsx|jsx|js|typescript|javascript)?\n([\s\S]*?)\n```/);
+      if (codeBlockMatch) {
+        finalCleanCode = codeBlockMatch[1];
+      } else {
+        const importIndex = finalCleanCode.indexOf("import");
+        if (importIndex !== -1) {
+          finalCleanCode = finalCleanCode.substring(importIndex);
+        }
+      }
+
+      finalCleanCode = finalCleanCode.replace(/^```[a-zA-Z]*\s*/g, "");
+      finalCleanCode = finalCleanCode.replace(/```\s*$/g, "");
+
+      setCodeResp(finalCleanCode);
+      setIsReady(true);
+      UpdateCodeToDb(finalCleanCode, record?.uid);
+    } catch (error) {
+      console.error("Error editing code:", error);
+    } finally {
+      setUpdateLoading(false);
+    }
+  };
+
+  const UpdateCodeToDb = async (newCode: string, recordUid?: string) => {
+    const targetUid = recordUid || record?.uid;
+    if (!targetUid) return;
+
     const result = await axios.put('/api/wireframe-to-code', {
-      uid: record?.uid,
-      codeResp: { resp: codeResp },
+      uid: targetUid,
+      codeResp: { resp: newCode },
     });
     console.log("Response from PUT:", result.data);
-
-
-    // console.log(result);
-  }
-  
-  
+    setRecord((prev: any) => ({
+      ...prev,
+      code: { resp: newCode }
+    }));
+  };
 
   return (
     <div>
       <AppHeader hideSideBar={true} />
       <div className="grid grid-cols-1 md:grid-cols-5 p-5 gap-10">
         <div>
-          <SelectDetail record={record} regenerateCode={GetRecordInfo} isReady={isReady} />
+          <SelectDetail 
+            record={record} 
+            regenerateCode={GetRecordInfo} 
+            isReady={isReady} 
+            handleEditCode={handleEditCode}
+            updateLoading={updateLoading}
+          />
         </div>
         <div className="col-span-4">
           {loading ? <div>

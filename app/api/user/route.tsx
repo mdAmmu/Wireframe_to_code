@@ -1,31 +1,39 @@
 
 import { NextRequest, NextResponse } from "next/server";
-import { eq } from "drizzle-orm";
-import { db } from "@/configs/db";
-import { usersTable } from "@/configs/schema";
+import fs from 'fs';
+import path from 'path';
+
+const DB_FILE = path.join(process.cwd(), 'db.json');
+
+function getLocalData() {
+  if (!fs.existsSync(DB_FILE)) {
+    fs.writeFileSync(DB_FILE, JSON.stringify({ wireframes: [], users: [] }, null, 2));
+  }
+  try {
+    return JSON.parse(fs.readFileSync(DB_FILE, 'utf-8'));
+  } catch (e) {
+    return { wireframes: [], users: [] };
+  }
+}
+
+function saveLocalData(data: any) {
+  fs.writeFileSync(DB_FILE, JSON.stringify(data, null, 2));
+}
 
 export async function POST(req: NextRequest) {
     const { userEmail, userName } = await req.json();
 
-    // try {
-    const result = await db.select().from(usersTable)
-        .where(eq(usersTable.email, userEmail));
-
-    if (result?.length == 0) {
-
-        const result: any = await db.insert(usersTable).values({
+    const data = getLocalData();
+    let user = data.users.find((u: any) => u.email === userEmail);
+    if (!user) {
+        user = {
+            id: data.users.length + 1,
             name: userName,
             email: userEmail,
-            credits: 0,
-            // @ts-ignore
-        }).returning(usersTable);
-
-        return NextResponse.json(result[0]);
+            credits: 100 // Give initial presentation credits
+        };
+        data.users.push(user);
+        saveLocalData(data);
     }
-    return NextResponse.json(result[0]);
-
-
-    // } catch (e) {
-    //     return NextResponse.json(e)
-    // }
+    return NextResponse.json(user);
 }

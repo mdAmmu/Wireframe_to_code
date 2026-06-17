@@ -27,7 +27,7 @@ function DashboardProvider({
 
     const checkUser = async () => {
         const result = await axios.post('/api/user', {
-            userName: user?.user?.displayName,
+            userName: user?.user?.user_metadata?.full_name,
             userEmail: user?.user?.email
         });
         console.log(user);

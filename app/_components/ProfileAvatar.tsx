@@ -1,6 +1,5 @@
 "use client"
-import { auth } from '@/configs/firebaseConfig';
-import { onAuthStateChanged, signOut } from 'firebase/auth';
+import { supabase } from '@/configs/supabaseConfig';
 import Image from 'next/image';
 import React, { useEffect } from 'react'
 import { useAuthContext } from '../provider';
@@ -17,19 +16,15 @@ function ProfileAvatar() {
 
     const user = useAuthContext();
     const router = useRouter();
-    const onButtonPress = () => {
-        signOut(auth).then(() => {
-            // Sign-out successful.
-            router.replace('/')
-        }).catch((error) => {
-            // An error happened.
-        });
+    const onButtonPress = async () => {
+        await supabase.auth.signOut();
+        router.replace('/');
     }
     return (
         <div>
             <Popover >
                 <PopoverTrigger>
-                    {user?.user?.photoURL && <img src={user?.user?.photoURL} alt='profile' className='w-[35px] h-[35px] rounded-full' />}
+                    {user?.user?.user_metadata?.avatar_url && <img src={user?.user?.user_metadata?.avatar_url} alt='profile' className='w-[35px] h-[35px] rounded-full' />}
                 </PopoverTrigger>
                 <PopoverContent className='w-[100px] mx-w-sm'>
                     <Button variant={'ghost'} onClick={onButtonPress} className=''>Logout</Button>
